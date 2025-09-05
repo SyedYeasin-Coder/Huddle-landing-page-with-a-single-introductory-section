@@ -98,6 +98,8 @@ p {
 @media(max-width:calc(1000 / 16 * 1rem)) {
     body {
         text-align: center;
+        background     : url("./images/bg-mobile.svg") no-repeat var(--purple);
+        background-size: cover;
     }
 
     main {
