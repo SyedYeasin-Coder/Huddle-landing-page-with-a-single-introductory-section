@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --purple : hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+    --fh1    : clamp(2rem, 2rem + 1vw, 4rem);
+    --fp     : clamp(1rem, 0.8rem + 1vw, 1.3rem);
+    --fw400  : 400;
+    --fw600  : 600;
+}
+
+.attribution {
+    text-align: center;
+    font-size : 1rem;
+}
+
+.attribution a {
+    color: var(--magenta);
+}
+
+.logo {
+    width    : 30vw;
+    max-width: calc(15rem + 1vw);
+}
+
+body {
+    font-family    : "Open Sans", sans-serif;
+    min-height     : 100vh;
+    padding        : 4rem;
+    color          : white;
+    background     : url("./images/bg-desktop.svg") no-repeat var(--purple);
+    background-size: cover;
+}
+
+main {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    align-items          : center;
+    gap                  : 3rem;
+    margin               : 3rem 0 1rem 0;
+}
+
+h1 {
+    font-size  : var(--fh1);
+    font-family: "Poppins", sans-serif;
+    font-weight: var(--fw600);
+}
+
+p {
+    font-size  : var(--fp);
+    font-weight: var(--fw400);
+    margin     : 1.5rem 0;
+}
+
+.btn-register {
+    padding         : 1rem 2rem;
+    background-color: white;
+    border          : none;
+    border-radius   : 32px;
+    box-shadow      : 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+    cursor          : pointer;
+    width           : 250px;
+    color           : var(--purple);
+    font-weight     : var(--fw400);
+    font-size       : var(--fp);
+    transition      : all 0.4s ease-in-out;
+}
+
+.btn-register:hover,
+.btn-register:active {
+    background-color: var(--magenta);
+    color           : white;
+}
+
+.socials {
+    text-align: right;
+}
+
+.socials .fa-brands {
+    text-decoration: none;
+    color          : white;
+    border         : 1px solid white;
+    padding        : 0.5rem;
+    border-radius  : 50%;
+    margin         : 0 0.25rem;
+    transition     : all 0.4s ease-in-out;
+}
+
+.socials a:hover .fa-brands {
+    color       : var(--magenta);
+    border-color: var(--magenta);
+}
+
+.socials .fa-facebook-f {
+    padding: 0.5rem 0.65rem;
+}
+
+@media(max-width:calc(1000 / 16 * 1rem)) {
+    body {
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .socials {
+        margin-top   : 5rem;
+        margin-bottom: 2rem;
+        text-align   : center;
+    }
+}
